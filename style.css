@@ -1,0 +1,92 @@
+/*
+  File: style.css
+  Description: Styles for a dark theme with a particle animation background.
+*/
+
+:root {
+    --primary-bg-color: #1a1a1a;
+    --card-bg-color: rgba(34, 34, 34, 0.75);
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --link-color: #58a6ff;
+    --border-color: #444;
+    --font-family: 'Poppins', 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background-color: var(--primary-bg-color); /* Fallback background */
+    color: var(--text-color);
+  }
+  
+  /* Styles for the particles.js background canvas */
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-bg-color);
+    z-index: -1;
+  }
+  
+  /* This wrapper keeps content on top of the animation */
+  .content-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  
+  a {
+    color: var(--link-color);
+  }
+  a:hover {
+    color: var(--heading-color);
+  }
+  
+  /* --- Header & Footer --- */
+  .main-header {
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .main-header img {
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 50%;
+  }
+  .main-header span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: auto;
+  }
+  .footer {
+    border-top: 1px solid var(--border-color);
+  }
+  
+  /* --- Main Content Cards --- */
+  .content-card {
+    background-color: var(--card-bg-color);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  .content-card h1,
+  .content-card h2 {
+    color: var(--heading-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .note em {
+    display: block;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-left: 4px solid var(--link-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
